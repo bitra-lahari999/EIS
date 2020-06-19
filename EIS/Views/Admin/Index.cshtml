@@ -1,0 +1,99 @@
+﻿@model IEnumerable<EIS.Models.EmpDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Employees Details</h1>
+
+<div class="parent">
+
+    <div class="child">
+        @Html.ActionLink("Create New", "Create")
+    </div>
+    <div class="child">
+        @Html.ActionLink("Download Details", "ExportCSV_Employee")
+        </div></div>
+
+        <table class="table parent">
+            <tr class="c1">
+                <th>
+                    @Html.DisplayNameFor(model => model.Emp_id)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.Fname)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lname)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.DOB)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.ContactNo)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.Email_id)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.PAN)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.Designation)
+                </th>
+                <th >
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr class="c1">
+                    <div style="width:80%;">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Emp_id)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Fname)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Lname)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.DOB)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.ContactNo)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Email_id)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.PAN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Designation)
+                    </td>
+                    <td >
+                        @Html.DisplayFor(modelItem => item.Salary)
+                    </td></div>
+                    <div  style="width:20%;">
+                        <td class="p1">
+                            <div class="c1" >@Html.ActionLink("Edit", "Edit", new { id = item.Emp_id }) </div>
+                            <div class="c1">
+                                @Html.ActionLink("Details", "Details", new { id = item.Emp_id })
+                            </div>
+                            <div class="c1"> @Html.ActionLink("Delete", "Delete", new { id = item.Emp_id })</div>
+                        </td>
+                    </div>
+                </tr>
+            }
+
+        </table>

@@ -1,0 +1,115 @@
+﻿@model EIS.Models.EmpDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EmpDetail</h4>
+    <hr />
+    <dl class="dl-horizontal" class="p1">
+        <div class="c1">
+            <dt>
+                First Name
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fname)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Last Name
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Lname)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Date Of Birth
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DOB)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Contact Number
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContactNo)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Email Id
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email_id)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Pan Number
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PAN)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Address
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                PassWord
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Designation
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Designation)
+            </dd>
+        </div>
+        <div class="c1">
+            <dt>
+                Salary
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Salary)
+            </dd>
+        </div>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Home", "Index")
+        </div>
+    }
+</div>

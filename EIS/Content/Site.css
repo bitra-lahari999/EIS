@@ -1,0 +1,88 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.parent {
+    display: flex;
+    margin: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.child {
+    width: 40%;
+    border: 1px solid #ddd;
+    padding: 2%;
+    padding-top: 0%;
+    margin: 1%;
+    padding-bottom: 0%;
+    box-shadow: 0px 3px 3px 0px #000;
+}
+.f1 {
+    width: 100%;
+    padding: 1%;
+    margin: 1%;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 0px 0px #000;
+}
+.p1 {
+    display: flex;
+    margin: 1%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.c1 {
+    width: 96%;
+    border: 1px solid #ddd;
+    padding: 2%;
+    padding-top: 0%;
+    margin: 1%;
+    padding-bottom: 0%;
+    box-shadow: 0px 3px 3px 0px #000;
+}
+.fc {
+    width: 98%;
+    border: 1px solid #ddd;
+    padding: 2%;
+    padding-top: 0%;
+    margin: 1%;
+    padding-bottom: 0%;
+    box-shadow: 0px 3px 3px 0px #000;
+}
+
+.head {
+    background-color: #1c95a3;
+}
+    .head li {
+        background-clip:#fff;
+        color: #fff;
+        font-weight: bold;
+    }
+        .head li:hover {
+            background-clip: #1c95a3;
+            border-bottom: 2px solid #fff;
+            border-top: 2px solid #fff;
+        }
+.jis
+{
+    background-image: linear-gradient(to right, #c234c7, #29ccc9, #c234c7);
+}

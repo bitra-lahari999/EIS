@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>@ViewBag.Title - Employee System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top head">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <div class="navbar-collapse collapse ">
+                <ul class="el nav navbar-nav el">
+                    <li class="el">@Html.ActionLink("Home", "Index", "Home")</li>
+
+                </ul>
+
+
+                @if (Session["name"] == null && Session["Emp_id"] == null)
+                {
+            <ul class="el nav navbar-nav " style="color:white;">
+                <li class="el">@Html.ActionLink("Employee Register", "Register", "Login")</li>
+            </ul>
+            <ul class="el nav navbar-nav  el" style=" color: white;float:right;">
+                <li class="el">@Html.ActionLink("Admin Login", "Index", "AdminLogin")</li>
+            </ul>
+            <ul class="el nav navbar-nav el" style="color: white;float:right;">
+                <li class="el">@Html.ActionLink("Employee Login", "Index", "Login")</li>
+            </ul>
+
+                }
+                else if (Session["name"] != null)
+                {
+            <ul class="el nav navbar-nav" style="color:white;float:right;">
+                <li class="el">
+                    <h4 style="color:white">Hello @Session["name"]</h4>
+                </li>
+            </ul>
+            <ul class="el nav navbar-nav" style="color: white;float: right;">
+                <li class="el">
+                    @Html.ActionLink("Logout", "Logout", "AdminLogin")
+                </li>
+            </ul>
+
+                }
+
+                else
+                {
+            <ul class="el nav navbar-nav" style="color: white;float: right;">
+                <li class="el">
+                    <h4 style="color:white">Hello @Session["Fname"]</h4>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav" style="color:white;float:right;">
+                <li>
+                    @Html.ActionLink("Logout", "Logout", "Login")
+                </li>
+            </ul>
+                }
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+       
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

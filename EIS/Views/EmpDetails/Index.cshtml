@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EIS.Models.EmpDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Welcome @Session["Fname"]</h2>
+
+<table class="table">
+    
+
+<tr>
+    <div class="parent">
+
+        <div class="child">@Html.ActionLink("Edit", "Edit", new { id = Session["Emp_id"] }) </div>
+        <div class="child">@Html.ActionLink("Details", "Details", new { id = Session["Emp_id"] }) </div>
+        <div class="child">@Html.ActionLink("Download Details", "Downloads", new { id = Session["Emp_id"] })</div>
+    </div>
+    </tr>
+
+
+</table>
